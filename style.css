@@ -1,0 +1,64 @@
+body {
+  font-family: 'Roboto', sans-serif; 
+}
+
+.header-container {
+  margin-left: 20px;
+  display: flex;
+  justify-content: left; 
+  align-items: center; 
+}
+
+#filterInput {
+  margin-left: 720px; 
+}
+#filterDate {
+  margin-left: 10px; 
+}
+#filterTime {
+  margin-left: 10px; 
+}
+#filterClear {
+  margin-left: 10px;
+  font-weight: bold;
+}
+#filterInput, #filterDate, #filterTime, #filterClear {
+  padding: 10px;
+  cursor: pointer; 
+}
+
+.product-list {
+clear: both;
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-top: 20px;
+margin-left: 30px;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-between; 
+  padding: 2px;
+  border-bottom: 1px solid #ddd;
+  align-items: center; 
+}
+
+.product-column {
+  flex: 1;
+  text-align: center;
+  display: flex; 
+  align-items: center; 
+}
+
+.product-header {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+}
+
+.product-checkbox {
+  margin-right: 10px; 
+}
