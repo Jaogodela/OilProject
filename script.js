@@ -2,6 +2,8 @@ const produtos = [
   { nome: "Soya", quantidade: 10, preco: "50,00", unit: "3,90", data: "08/11/2024", hora: "10:30" },
   { nome: "Cocamar", quantidade: 5, preco: "30,00", unit: "4,75", data: "07/11/2024", hora: "14:00" },
   { nome: "Liza", quantidade: 20, preco: "45,00", unit: "4,50", data: "11/10/2024", hora: "16:45" },
+  { nome: "Soya", quantidade: 10, preco: "50,00", unit: "2,56", data: "08/11/2024", hora: "10:30" },
+  { nome: "Cocamar", quantidade: 5, preco: "30,00", unit: "3,94", data: "07/11/2024", hora: "14:00" },
 ];
 
 const productContainer = document.getElementById('productContainer');
@@ -9,10 +11,6 @@ const filterInput = document.getElementById('filterInput');
 const filterDate = document.getElementById('filterDate');
 const filterTime = document.getElementById('filterTime');
 const filterClear = document.getElementById('filterClear'); 
-
-
-
-
 
 const headerRow = document.createElement('div');
 headerRow.classList.add('product-row', 'product-header');
@@ -63,7 +61,6 @@ function applyFilters() {
 
   renderProducts(produtosFiltrados);
 }
-
 
 function clearFilters() {
   filterInput.value = ''; 
