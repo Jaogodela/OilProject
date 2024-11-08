@@ -1,7 +1,7 @@
 const produtos = [
-  { nome: "Soya", quantidade: 10, preco: 50.00, unit: 3.90, data: "08/11/2024", hora: "10:30" },
-  { nome: "Cocamar", quantidade: 5, preco: 30.00, unit: 4.75, data: "07/11/2024", hora: "14:00" },
-  { nome: "Liza", quantidade: 20, preco: 45.00, unit: 4.50, data: "11/10/2024", hora: "16:45" },
+  { nome: "Soya", quantidade: 10, preco: "50,00", unit: "3,90", data: "08/11/2024", hora: "10:30" },
+  { nome: "Cocamar", quantidade: 5, preco: "30,00", unit: "4,75", data: "07/11/2024", hora: "14:00" },
+  { nome: "Liza", quantidade: 20, preco: "45,00", unit: "4,50", data: "11/10/2024", hora: "16:45" },
 ];
 
 const productContainer = document.getElementById('productContainer');
@@ -37,13 +37,11 @@ function renderProducts(produtosFiltrados) {
     const row = document.createElement('div');
     row.classList.add('product-row');
     row.innerHTML = `
-      <div class="product-column">
-        <input type="checkbox" class="product-checkbox"> 
-        ${produto.nome}
-      </div>
+      <input type="checkbox" class="product-checkbox"> 
+      <div class="product-column">${produto.nome}</div>
       <div class="product-column">${produto.quantidade}</div>
-      <div class="product-column">R$ ${produto.preco.toFixed(2)}</div>
-      <div class="product-column">${produto.unit.toFixed(2)}</div>
+      <div class="product-column">R$ ${produto.preco}</div>
+      <div class="product-column">R$ ${produto.unit}</div>
       <div class="product-column">${produto.data}</div>
       <div class="product-column">${produto.hora}</div>
     `;
