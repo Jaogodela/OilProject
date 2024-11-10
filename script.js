@@ -15,12 +15,12 @@ const filterClear = document.getElementById('filterClear');
 const headerRow = document.createElement('div');
 headerRow.classList.add('product-row', 'product-header');
 headerRow.innerHTML = `
-  <div class="product-column">MARCA</div>
-  <div class="product-column">QUANTIDADE</div>
-  <div class="product-column">PREÇO TOTAL</div>
-  <div class="product-column">PREÇO UNITÁRIO</div>
-  <div class="product-column">DATA</div>
-  <div class="product-column">HORA</div>
+  <p class="product-column">MARCA</p>
+  <p class="product-column">QUANTIDADE</p>
+  <p class="product-column">PREÇO TOTAL</p>
+  <p class="product-column">PREÇO UNITÁRIO</p>
+  <p class="product-column">DATA</p>
+  <p class="product-column">HORA</p>
 `;
 
 if (!productContainer.querySelector('.product-header')) {
@@ -35,14 +35,13 @@ function renderProducts(produtosFiltrados) {
     const row = document.createElement('div');
     row.classList.add('product-row');
     row.innerHTML = `
-      <input type="checkbox" class="product-checkbox"> 
-      <div class="product-column">${produto.nome}</div>
-      <div class="product-column">${produto.quantidade}</div>
-      <div class="product-column">R$ ${produto.preco}</div>
-      <div class="product-column">R$ ${produto.unit}</div>
-      <div class="product-column">${produto.data}</div>
-      <div class="product-column">${produto.hora}</div>
-    `;
+      <p class="product-column">${produto.nome}</p>
+      <p class="product-column">${produto.quantidade}</p>
+      <p class="product-column">R$ ${produto.preco}</p>
+      <p class="product-column">R$ ${produto.unit}</p>
+      <p class="product-column">${produto.data}</p>
+      <p class="product-column">${produto.hora}</p>
+    `; // em memórias: <input type="checkbox" class="product-checkbox"> 
     productContainer.appendChild(row);
   });
 }

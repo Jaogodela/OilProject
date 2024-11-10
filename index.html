@@ -11,13 +11,14 @@
 </head>
 <body>
   <div class="header-container">
-  <h1>Histórico Compras</h1>
-
-  <input type="text" id="filterInput" placeholder="Filtrar por nome" oninput="applyFilters()">
-  <input type="date" id="filterDate" oninput="applyFilters()" placeholder="Filtrar por data">
-  <input type="time" id="filterTime" oninput="applyFilters()" placeholder="Filtrar por hora">
-    <button id="filterClear">LIMPAR FILTROS</button>
+    <h1>Histórico Compras</h1>
+    <div class="header-inputs">
+      <input type="text" id="filterInput" placeholder="Filtrar por nome" oninput="applyFilters()">
+      <input type="date" id="filterDate" oninput="applyFilters()" placeholder="Filtrar por data">
+      <input type="time" id="filterTime" oninput="applyFilters()" placeholder="Filtrar por hora">
+      <button id="filterClear">LIMPAR FILTROS</button>
     </div>
+  </div>
   <div id="productContainer" class="product-list">
   
   </div>
