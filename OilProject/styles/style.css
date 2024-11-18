@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Roboto', sans-serif; 
 }
@@ -23,25 +24,24 @@ body {
 }
 
 #filterClear {
-    background-color: #FF6666; 
-    color: white;
-    border: 1px solid black; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    font-weight: bold;
-    transition: background-color 0.3s, box-shadow 0.3s; 
-  }
+  background-color: #FF6666; 
+  color: white;
+  border: 1px solid black; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s; 
+}
 
 #filterClear:hover {
-    background-color: #FF3333; 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+  background-color: #FF3333; 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
 }
- 
 
 
-#teste, #filterInput, #filterDateAndTime, #filterClear, #filterLoja {
+#quantitySelection, #filterInput, #filterDateAndTime, #filterClear, #filterLoja {
   font-family: 'Roboto', sans-serif;
   padding: 10px;
   cursor: pointer; 
@@ -60,15 +60,14 @@ body {
 
 .product-row {
   display: grid;
-  grid-template-columns: repeat(9, 0.2fr);
-  justify-content: space-between; 
+  grid-template-columns: repeat(9, 1fr); 
+  justify-content: space-between;
   text-align: center;
-  padding: 0px; 
+  padding: 0px;
   border-bottom: 1px solid #ddd;
-  align-items: center; 
+  align-items: center;
   margin-left: 20px;
 }
-
 .product-header {
   font-weight: bold;
   border-bottom: 2px solid #333;

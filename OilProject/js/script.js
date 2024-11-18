@@ -26,7 +26,7 @@ const filterInput = document.getElementById('filterInput');
 const filterDate = document.getElementById('filterDate');
 const filterTime = document.getElementById('filterTime'); 
 const filterLoja = document.getElementById('filterLoja');
-const selectElement = document.getElementById('teste');
+const selectElement = document.getElementById('quantitySelection');
 
 const headerRow = document.createElement('div');
 headerRow.classList.add('product-row', 'product-header');
