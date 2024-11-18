@@ -41,7 +41,7 @@ body {
  
 
 
-#teste, #filterInput, #filterDate, #filterTime, #filterClear, #filterLoja {
+#teste, #filterInput, #filterDateAndTime, #filterClear, #filterLoja {
   font-family: 'Roboto', sans-serif;
   padding: 10px;
   cursor: pointer; 
