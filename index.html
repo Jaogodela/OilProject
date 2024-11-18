@@ -23,7 +23,9 @@
         <option value="Justos">Justos</option>
         </select>
       
-      <input type="date" id="filterDate" oninput="applyFilters()" placeholder="Filtrar por data">
+      <!-- <input type="date" id="filterDate" oninput="applyFilters()" placeholder="Filtrar por data"> -->
+      <input type="datetime-local" id="filterDate" oninput="applyFilters()" name="datetime">
+
       <input type="time" id="filterTime" oninput="applyFilters()" placeholder="Filtrar por hora">
       <button id="filterClear">LIMPAR FILTROS</button>
       <select id="teste" name="teste">
