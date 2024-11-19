@@ -1,0 +1,59 @@
+.delete-products-box {
+  font-family: 'Roboto', sans-serif; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000; 
+  border: 1px solid black; 
+}
+
+.delete-products-box p {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 16px;
+  color: #333; 
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-delete-empty, .btn-delete-confirm {
+  color: white;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 18px; 
+  padding: 10px 20px;  
+  border-radius: 5px; 
+  cursor: pointer; 
+  width: 200px; 
+  margin: 5px; 
+  border: 1px solid black; 
+}
+
+.btn-delete-empty {
+  background-color: red;
+}
+
+.btn-delete-confirm {
+  background-color: green;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+  gap: 10px; 
+}

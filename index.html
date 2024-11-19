@@ -3,46 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OilProject</title>
-  <link rel="stylesheet" href="OilProject/styles/style.css">
-  <link rel="stylesheet" href="OilProject/styles/buttons/deleteButton.css">
+  <link rel="stylesheet" href="OilProject/src/css/addPageStyles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+  <title>OilProject</title>
 </head>
 <body>
+  <div class="center-container">
   <div class="header-container">
-    <h1>Histórico Compras</h1>
-    <div class="header-inputs">
-      <input type="text" id="filterInput" placeholder="Filtrar por nome" oninput="applyFilters()">
-      
-      <select id="filterLoja" name="filterLoja">
-        <option value="">Selecione a Loja</option> 
-        <option value="Rappi">Rappi</option> 
-        <option value="Ifood">Ifood</option> 
-        <option value="Uber">Uber</option>
-        <option value="Justos">Justos</option>
-        <option value="Carrefour">Carrefour</option>
-        </select>
-      
-      <!-- <input type="date" id="filterDate" oninput="applyFilters()" placeholder="Filtrar por data"> -->
-      <input type="datetime-local" id="filterDateAndTime" oninput="applyFilters()" name="datetime">
-      <button id="filterClear" class="btn">LIMPAR FILTROS</button>
-      <select id="quantitySelection" name="teste">
-        <option value="">Quantidade a mostra</option> 
-        <option value="10">10</option> 
-        <option value="15">15</option> 
-        <option value="20">20</option>
-        <option value="25">25</option>
-        <option value="50">50</option>
-        </select>
+    <h1>OilProject</h1>
+  <div class="header-buttonse">
+    <button id="buttonAddProduct">Adicionar</button>
+    <button id="buttonRemoveProduct">Saída</button>
+    <button id="buttonRegisterSell">Registrar venda</button>
+    <button id="buttonRedirectToHistory">Histórico compras</button>
+    <button id="buttonGenerateRelatory">Gerar relatório .CSV</button>
     </div>
   </div>
-  <div id="productContainer" class="product-list">
-  </div> 
-  <script src="OilProject/js/script.js"></script>
-  <script src="OilProject/js/clearFilter.js"></script>
-  <script src="OilProject/js/applyfilters.js"></script>
-  <script src="OilProject/js/functionCheckbox.js"></script>
+  </div>
+  <script>  
+    document.getElementById('buttonRedirectToHistory').addEventListener('click', function() { window.location.href = 'OilProject/src/pages/historyProducts.html';  });
+    document.getElementById('buttonRemoveProduct').addEventListener('click', function() { window.location.href = 'OilProject/src/pages/removeProducts.html';  });
+    document.getElementById('buttonRegisterSell').addEventListener('click', function() { window.location.href = 'OilProject/src/pages/registerSell.html';  });
+
+    document.getElementById('buttonGenerateRelatory').addEventListener('click', function() { window.location.href = 'OilProject/src/pages/generateRelatory.html';  });
+
+    document.getElementById('buttonAddProduct').addEventListener('click', function() { window.location.href = 'OilProject/src/pages/addProducts.html';  });
+  </script>
 </body>
 </html>

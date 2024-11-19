@@ -50,7 +50,7 @@ function renderProducts(produtosFiltrados) {
   const itemsPerPage = parseInt(selectElement.value, 10) || 10; 
   productContainer.innerHTML = headerRow.outerHTML; 
 
-  produtosFiltrados.slice(0, itemsPerPage).forEach(produto => {
+  produtosFiltrados.forEach(produto => {
     const row = document.createElement('div');
     row.classList.add('product-row');
     row.innerHTML = `
@@ -70,6 +70,5 @@ function renderProducts(produtosFiltrados) {
 
 selectElement.addEventListener('change', () => renderProducts(produtos));
 
-window.renderProducts = renderProducts;
-
 renderProducts(produtos);
+window.renderProducts = renderProducts;

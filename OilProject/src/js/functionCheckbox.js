@@ -9,13 +9,14 @@ function toggleDeleteButton() {
     if (!deleteButton) {
       deleteButton = document.createElement('button');
       deleteButton.id = 'delete';
-      deleteButton.classList.add('btn', 'btn-delete'); // Adicionando as classes de estilo
+      deleteButton.classList.add('btn', 'btn-delete'); 
       deleteButton.innerHTML = `
         <span class="mdi mdi-delete mdi-24px"></span>
         <span class="mdi mdi-delete-empty mdi-24px"></span>
-        <span>Delete</span>
+        <span>Deletar</span>
       `;
       headerContainer.appendChild(deleteButton);
+      deleteButton.addEventListener('click', deleteProducts);
     }
   } else {
     if (deleteButton) {

@@ -1,15 +1,14 @@
-
 body {
   font-family: 'Roboto', sans-serif; 
 }
 
 .header-container {
-  margin-left: 50px;
+  margin-left: 45px;
   display: flex;
   justify-content: left; 
   align-items: center; 
   min-width: 968px;
-  overflow-x: auto;
+  
 }
 
 .header-container input {
