@@ -18,7 +18,7 @@ document.getElementById('buttonAddProducts').addEventListener('click', async (ev
   const seconds = String(today.getSeconds()).padStart(2, '0');
   const currentDateTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 
-  if (productPlace && productMark && productsQuantity && productsPrice && fileField.files.length > 0) {
+  if (productPlace && productMark && productsQuantity && productsPrice > 0) {
     formData.append('imageNF', fileField.files[0]);
     formData.append('loja', productPlace);
     formData.append('marca', productMark);
@@ -32,7 +32,7 @@ document.getElementById('buttonAddProducts').addEventListener('click', async (ev
     }
 
     try {
-      const response = await fetch('http://localhost:3000/addproducts', {
+      const response = await fetch('http://localhost:3000/addProduct', {
         method: 'POST',
         body: formData
       });
