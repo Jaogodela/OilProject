@@ -32,7 +32,7 @@ document.getElementById('buttonAddProducts').addEventListener('click', async (ev
     }
 
     try {
-      const response = await fetch('http://localhost:3000/addProduct', {
+      const response = await fetch('https://upgraded-enigma-v6pjw996p7x6cwj44-3000.app.github.dev/addProduct', {
         method: 'POST',
         body: formData
       });
