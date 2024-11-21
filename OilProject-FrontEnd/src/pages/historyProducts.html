@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,42 +10,43 @@
   <link rel="stylesheet" href="../css/historyPageStyles/box/deleteButtonBox.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
 </head>
+
 <body>
   <div class="header-container">
     <h1>Histórico Compras</h1>
     <div class="header-inputs">
-      <input type="text" id="filterInput" placeholder="Filtrar por nome" oninput="applyFilters()">
-      
+      <!-- <input type="text" id="filterInput" placeholder="Filtrar por nome" oninput="applyFilters()">
+
       <select id="filterLoja" name="filterLoja">
-        <option value="">Selecione a Loja</option> 
-        <option value="Rappi">Rappi</option> 
-        <option value="Ifood">Ifood</option> 
+        <option value="">Selecione a Loja</option>
+        <option value="Rappi">Rappi</option>
+        <option value="Ifood">Ifood</option>
         <option value="Uber">Uber</option>
         <option value="Justos">Justos</option>
         <option value="Carrefour">Carrefour</option>
-        </select>
-      
-      <!-- <input type="date" id="filterDate" oninput="applyFilters()" placeholder="Filtrar por data"> -->
+      </select> 
+
+      <input type="date" id="filterDate" oninput="applyFilters()" placeholder="Filtrar por data"> 
       <input type="datetime-local" id="filterDateAndTime" oninput="applyFilters()" name="datetime">
       <button id="filterClear">LIMPAR FILTROS</button>
       <select id="quantitySelection" name="teste">
-        <option value="">Quantidade a mostra</option> 
-        <option value="10">10</option> 
-        <option value="15">15</option> 
+        <option value="">Quantidade a mostra</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
         <option value="20">20</option>
         <option value="25">25</option>
         <option value="50">50</option>
-        </select>
+      </select> -->
     </div>
   </div>
   <div id="productContainer" class="product-list">
-  </div> 
+  </div>
   <script src="../js/script.js"></script>
-  <script src="../js/clearFilter.js"></script>
-  <script src="../js/applyfilters.js"></script>
   <script src="../js/functionCheckbox.js"></script>
   <script src="../js/interactions/deleteButton.js"></script>
 </body>
+
 </html>
