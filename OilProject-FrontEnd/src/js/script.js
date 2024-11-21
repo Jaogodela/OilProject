@@ -63,7 +63,7 @@ function renderProducts(produtosFiltrados) {
       <p class="product-column">R$ ${produto.unit}</p>
       <p class="product-column">${produto.data} ${produto.hora}</p>
       <a href="${produto.imageNF}" download> 
-      <img src="../images/download-icon.png" alt="Download" width="30" height="30"> </a>
+      <img src="../images/download-icon.png" alt="Download" width="25" height="25"> </a>
     `; 
     productContainer.appendChild(row);
   });

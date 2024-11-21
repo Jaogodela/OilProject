@@ -1,4 +1,6 @@
 const multer = require('multer');
+const { addProduct } = require('../functions/queries'); 
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, 'uploads/'),
@@ -16,8 +18,21 @@ module.exports = function (app) {
       return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
     }
 
-    console.log(req.body); // Log dos dados recebidos
+    const productData = {
+      loja,
+      marca,
+      quantidade,
+      preco,
+      unit,
+      dataHora,
+      imageNF: file.path
+    };
 
-    res.status(201).json({ message: 'Produto adicionado com sucesso!' });
+    addProduct(productData, (err) => {
+      if (err) {
+        return res.status(500).json({ message: 'Erro ao adicionar produto.' });
+      }
+      res.status(201).json({ message: 'Produto adicionado com sucesso!' });
+    });
   });
 };
