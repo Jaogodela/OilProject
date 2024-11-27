@@ -1,4 +1,4 @@
-# Sistema de Controle de Estoque Personalizado para Óleos
+# Sistema de Controle de Estoque
 
 Este projeto consiste em uma aplicação JavaScript para controle de estoque especificamente para óleos. A aplicação permite a entrada, saída e venda de produtos, aplicação de filtros e geração de relatórios detalhados.
 
