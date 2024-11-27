@@ -13,7 +13,7 @@
   <div class="header-container">
     <h1>OilProject</h1>
     <div class="header-inputs">
-      <label for="ProductOption">Selecione o produto para saída: <span class="required">*</span></label>
+      <label for="ProductOption">Selecione o produto para venda: <span class="required">*</span></label>
       <select id="ProductOption" name="ProductOption" required>
         <option value="pet-oleo-900ml">PET Oléo de Soja 900ml</option>
         <option value="galao-oleo-18l">Galão Oléo de Soja 18L</option>
@@ -25,13 +25,12 @@
       
        <label for="productQuantity">Informe a quantidade: <span class="required">*</span></label>
        <input type="number" id="productQuantity" name="productQuantity" placeholder="Quantidade" required>
-
-
       
        <label for="productValue">Informe o valor de venda por unidade: <span class="required">*</span></label>
        <input type="number" id="productValue" name="productValue" placeholder="Valor">
-      <button id="buttonRemoveProducts" type="submit">Enviar</button>
+      <button id="buttonSellProducts" type="submit">Enviar</button>
     </div>
   </div>
+  <script src="../js/sellProducts/interactions/sellProductForm.js"></script>
 </body>
 </html>

@@ -22,7 +22,6 @@
         <option value="Justos">Justos</option>
         <option value="Carrefour">Carrefour</option>
       </select>
-
       <label for="ProductMark">Selecione a Marca: <span class="required">*</span></label>
       <select id="ProductMark" name="ProductMark" required>
         <option value="">Selecione a Marca</option> 
@@ -39,6 +38,23 @@
       <label for="ProductsQuantity">Quantidade: <span class="required">*</span></label>
       <input type="number" id="ProductsQuantity" placeholder="Quantidade:" required>
 
+      <button id="addMore">Incluir</button>
+      <label for="ProductMarkSecond" id="ProductMarkLabel" class="fade" style="display: none;">Selecione a Marca: <span class="required">*</span></label>
+        <select id="ProductMarkSecond" class="fade" style="display: none;" name="ProductMark" required>
+          <option value="">Selecione a Marca</option> 
+          <option value="Soya">Soya</option> 
+          <option value="Liza">Liza</option> 
+          <option value="Cocamar">Cocamar</option>
+          <option value="Concórdia">Concórdia</option>
+          <option value="Coamo">Coamo</option>
+          <option value="Vitaliv">Vitaliv</option>
+          <option value="Qualita">Qualita</option>
+          <option value="VilaVelha">Vila Velha 18L</option>
+        </select>
+      <label for="ProductsQuantitySecond" class="fade" id="ProductQuantityLabel" style="display: none;">Quantidade do segundo produto: <span class="required">*</span></label>
+      <input type="number" id="ProductsQuantitySecond" class="fade" style="display: none;" placeholder="Quantidade:" required>
+      
+
       <label for="ProductsPrice">Preço total: <span class="required">*</span></label>
       <input type="number" id="ProductsPrice" placeholder="Preço total:" step="0.01" min="0" required>
 
@@ -47,6 +63,7 @@
       <button id="buttonAddProducts" type="submit">Enviar</button>
     </div>
   </div>
-  <script src="../js/interactions/postForm.js"></script>
+  <script src="../js/addProducts/interactions/postForm.js"></script>
+  <script src="../js/addProducts/interactions/addMore.js"></script>
 </body>
 </html>
