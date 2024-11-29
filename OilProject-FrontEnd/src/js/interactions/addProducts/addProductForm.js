@@ -1,3 +1,5 @@
+const buttonAddProducts = document.getElementById('buttonAddProducts');
+
 async function loadConfig() {
     try {
         const response = await fetch('../../../configRotas.json');
@@ -41,17 +43,22 @@ async function addProduct(config) {
         for (let [key, value] of formData.entries()) {
             console.log(`${key}: ${value}`);
         }
-
         try {
-            const response = await fetch(config.ADD_PRODUCTS, { // Certifique-se de usar a chave correta
+            const response = await fetch(config.ADD_PRODUCTS, { 
                 method: 'POST',
                 body: formData
             });
-            const result = await response.json();
-            console.log('Success:', result);
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Success:', result);
+                alert('Produto adicionado com sucesso!');
+            } else {
+                alert('Erro ao adicionar o produto!');
+            }
         } catch (error) {
             console.error('Error:', error);
-        }
+            alert('Erro ao fazer a requisição. Por favor, tente novamente.');
+        }        
     } else {
         alert('Por favor, preencha todos os campos obrigatórios e selecione uma foto.');
     }

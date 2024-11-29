@@ -1,3 +1,5 @@
+const buttonRemoveProducts = document.getElementById('buttonRemoveProducts');
+
 async function loadConfig() {
     try {
         const response = await fetch('../../../configRotas.json');
@@ -8,7 +10,7 @@ async function loadConfig() {
 }
 
 async function postRemoveProducts(config) {
-    const productOption = document.getElementById('ProductOption').value;
+    const productOptionID = document.getElementById('ProductOption').value;
     const productQuantity = document.getElementById('ProductQuantity').value;
     const productRazao = document.getElementById('ProductRazao').value;
 
@@ -18,27 +20,37 @@ async function postRemoveProducts(config) {
     }
 
     const removeProductObj = { 
-        ProductOption: productOption, 
+        ProductOptionID: productOptionID, 
         ProductQuantity: productQuantity, 
         ProductRazao: productRazao 
     };
     console.log(removeProductObj);
+
     try {
         const response = await fetch(config.REMOVE_PRODUCTS, { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(removeProductObj)
         });
-        console.log('Success:', await response.json());
+        if (response.ok) {
+            const result = await response.json();
+            console.log('Success:', result);
+            alert('Saída registrada com sucesso!');
+        } else {
+            alert('Erro ao registrar saída do produto!');
+        }
     } catch (error) {
         console.error('Error:', error);
+        alert('Erro ao fazer a requisição. Por favor, tente novamente.');
     }
 }
 
-document.getElementById('buttonRemoveProducts').addEventListener('click', async (event) => {
+buttonRemoveProducts.addEventListener('click', async (event) => {
     event.preventDefault();
     const config = await loadConfig();
-    if(config) {
-        postRemoveProducts(config);
+    if (config) {
+        await postRemoveProducts(config);
+    } else {
+        alert('Erro ao carregar as configurações. Por favor, tente novamente mais tarde.');
     }
 });

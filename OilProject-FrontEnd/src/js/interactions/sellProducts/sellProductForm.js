@@ -1,3 +1,5 @@
+const buttonSellProducts = document.getElementById('buttonSellProducts');
+
 async function loadConfig() {
   try {
       const response = await fetch('../../../configRotas.json');
@@ -11,7 +13,7 @@ async function loadConfig() {
 }
 
 async function postSellProducts(config) {
-  const productOption = document.getElementById('ProductOption').value;
+  const productOptionID = document.getElementById('ProductOption').value;
   const productSellClient = document.getElementById('productSellClient').value;
   const productQuantity = document.getElementById('productQuantity').value;
   const productUnitValue = document.getElementById('productValue').value;
@@ -23,7 +25,7 @@ async function postSellProducts(config) {
   }
 
   const sellProductsObj = {
-      ProductOption: productOption,
+      ProductOptionID: productOptionID,
       ProductSellClient: productSellClient,
       ProductQuantity: productQuantity,
       ProductValue: productValue,
@@ -36,16 +38,25 @@ async function postSellProducts(config) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(sellProductsObj)
       });
-      console.log('Success:', await response.json());
+      if (response.ok) {
+          const result = await response.json();
+          console.log('Success:', result);
+          alert('Requisição concluída com sucesso!');
+      } else {
+        alert('Erro ao registrar a venda!');
+      }
   } catch (error) {
       console.error('Error:', error);
+      alert('Erro ao fazer a requisição. Por favor, tente novamente.');
   }
 }
 
-document.getElementById('buttonSellProducts').addEventListener('click', async (event) => {
+buttonSellProducts.addEventListener('click', async (event) => {
   event.preventDefault();
   const config = await loadConfig();
   if (config) {
-      postSellProducts(config);
+      await postSellProducts(config);
+  } else {
+      alert('Erro ao carregar as configurações. Por favor, tente novamente mais tarde.');
   }
 });
