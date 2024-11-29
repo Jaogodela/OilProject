@@ -1,5 +1,7 @@
 {
-    "ADD_PRODUCTS":"/api/post/addProduct",
-    "REMOVE_PRODUCTS":"/api/post/removeProduct",
-    "SELL_PRODUCTS":"/api/post/sellProduct"
+    "ADD_PRODUCTS":"/api/post/products/addProduct",
+    "REMOVE_PRODUCTS":"/api/post/products/removeProduct",
+    "SELL_PRODUCTS":"/api/post/products/sellProduct",
+    "RELATORY_PRODUCTS":"/api/get/products/relatory/${type}",
+    "LIST_PRODUCTS":"/api/get/products/list"
 }
