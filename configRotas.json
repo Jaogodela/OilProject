@@ -1,0 +1,5 @@
+{
+    "ADD_PRODUCTS":"/api/post/addProduct",
+    "REMOVE_PRODUCTS":"/api/post/removeProduct",
+    "SELL_PRODUCTS":"/api/post/sellProduct"
+}
