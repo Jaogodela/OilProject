@@ -26,7 +26,7 @@ const produtos = [
   const filterDate = document.getElementById('filterDateAndTime');
   const filterLoja = document.getElementById('filterLoja');
   const selectElement = document.getElementById('quantitySelection');
-  
+
   const headerRow = document.createElement('div');
   headerRow.classList.add('product-row', 'product-header');
   headerRow.innerHTML = `
@@ -61,11 +61,11 @@ const produtos = [
         <p class="product-column">R$ ${produto.unit}</p>
         <p class="product-column">${produto.data} ${produto.hora}</p>
         <a href="${produto.imageNF}" download> 
-        <img src="../images/download-icon.png" alt="Download" width="25" height="25" id="downloadIcon" data-id="${produto.id}"></a>
+        <i class="mdi mdi-download" alt="Download" id="downloadIcon" data-id="${produto.id}"></i>
       `; 
       productContainer.appendChild(row);
     });
   }
-  
-  renderProducts(produtos);
-  window.renderProducts = renderProducts;
+//<img src="../images/download-icon.png" alt="Download" width="25" height="25" id="downloadIcon" data-id="${produto.id}"></a>
+renderProducts(produtos);
+window.renderProducts = renderProducts;

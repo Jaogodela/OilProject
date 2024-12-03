@@ -1,6 +1,7 @@
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
+  margin-right: 20px;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -39,4 +40,54 @@
 .btn-delete:focus {
   -webkit-box-shadow: 0 0 0 4px #ffcccc;
           box-shadow: 0 0 0 4px #ffcccc;
+}
+
+#addProduct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #45a049;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  background: none;
+  border: 1px solid #bdbdbd;
+  height: 48px;
+  padding: 0 24px 0 16px;
+  letter-spacing: 0.25px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#addProduct:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 4px #a0ffa0;
+          box-shadow: 0 0 0 4px #a0ffa0;
+}
+
+#addProduct:hover {
+  background-color: #f5fff5;
+}
+
+#addProduct .mdi {
+  margin-right: 8px;
+  font-size: 20px; 
+}
+
+#addProduct .mdi-plus-box {
+  display: inline-block;
+}
+
+#addProduct .mdi-plus-circle-outline {
+  display: none;
+}
+
+#addProduct:hover .mdi-plus-box {
+  display: inline-block;
+}
+
+#addProduct:hover .mdi-plus-circle-outline {
+  display: inline-block;
 }

@@ -12,6 +12,10 @@ body {
   opacity: 0;
 }
 
+h1 {
+  color:#45a049;
+}
+
 .fade.show {
   opacity: 1;
 }

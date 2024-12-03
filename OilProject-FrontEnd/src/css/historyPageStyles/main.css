@@ -5,11 +5,17 @@ body {
 .header-container {
   margin-left: 45px;
   display: flex;
+  color: #45a049;
   justify-content: left; 
   align-items: center; 
   min-width: 968px;
   
 }
+#downloadIcon {
+  color: #45a049; 
+  font-size: 27px; 
+}
+
 
 .header-container input {
   margin-left: 1.2vh;
