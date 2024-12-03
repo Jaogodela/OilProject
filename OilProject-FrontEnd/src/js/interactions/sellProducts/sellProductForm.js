@@ -31,6 +31,7 @@ async function postSellProducts(config) {
       ProductValue: productValue,
       ProductUnitValue: productUnitValue
   };
+   console.log(sellProductsObj);
 
   try {
       const response = await fetch(config.SELL_PRODUCTS, {

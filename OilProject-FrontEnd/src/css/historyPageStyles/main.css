@@ -3,6 +3,7 @@ body {
 }
 
 .header-container {
+  font-family: 'Roboto', sans-serif;
   margin-left: 45px;
   display: flex;
   color: #45a049;
@@ -22,6 +23,7 @@ body {
 }
 
 .header-inputs {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: right;
   justify-content: right;
@@ -29,6 +31,7 @@ body {
 }
 
 #filterClear {
+  font-family: 'Roboto', sans-serif;
   background-color: #FF6666; 
   color: white;
   border: 1px solid black; 
@@ -54,6 +57,7 @@ body {
 }
 
 .product-list {
+  font-family: 'Roboto', sans-serif;
   clear: both;
   display: flex;
   flex-direction: column;
@@ -64,6 +68,7 @@ body {
 }
 
 .product-row {
+  font-family: 'Roboto', sans-serif;
   display: grid;
   grid-template-columns: repeat(9, 1fr); 
   justify-content: space-between;
@@ -74,6 +79,7 @@ body {
   margin-left: 20px;
 }
 .product-header {
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-bottom: 2px solid #333;
   padding-bottom: 5px;
