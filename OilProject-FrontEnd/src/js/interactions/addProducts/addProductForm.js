@@ -33,12 +33,12 @@ async function addProduct(config) {
 
     if (productPlace && productMark && productsQuantity && productsPrice > 0) {
         formData.append('imageNF', fileField.files[0]);
-        formData.append('loja', productPlace);
-        formData.append('marca', productMark);
-        formData.append('quantidade', productsQuantity);
-        formData.append('preco', productsPrice);
-        formData.append('unit', productsUnitPrice);
-        formData.append('dataHora', currentDateTime);
+        formData.append('productPlace', productPlace);
+        formData.append('productMark', productMark);
+        formData.append('productQuantity', productsQuantity);
+        formData.append('productPrice', productsPrice);
+        formData.append('productUnitPrice', productsUnitPrice);
+        formData.append('dateTime', currentDateTime);
 
         for (let [key, value] of formData.entries()) {
             console.log(`${key}: ${value}`);
