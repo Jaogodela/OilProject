@@ -3,5 +3,6 @@
     "REMOVE_PRODUCTS":"/api/post/products/removeProduct",
     "SELL_PRODUCTS":"/api/post/products/sellProduct",
     "RELATORY_PRODUCTS":"/api/get/products/relatory/${type}",
-    "LIST_PRODUCTS":"/api/get/products/list"
+    "LIST_PRODUCTS":"/api/get/products/list",
+    "DELETE_PRODUCTS":"/api/post/products/delete"
 }

@@ -16,7 +16,16 @@ function toggleDeleteButton() {
         <span>Deletar</span>
       `;
       headerContainer.appendChild(deleteButton);
-      deleteButton.addEventListener('click', deleteProducts);
+      deleteButton.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const config = await loadConfig();
+        if (config) {
+            await deleteProducts(config);
+        } else {
+            alert('Erro ao carregar as configurações. Por favor, tente novamente mais tarde.');
+        }
+    });
+      // deleteButton.addEventListener('click', deleteProducts);
     }
   } else {
     if (deleteButton) {
