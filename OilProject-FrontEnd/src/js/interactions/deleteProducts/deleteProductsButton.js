@@ -15,7 +15,7 @@ async function deleteProducts(config) {
     console.log(selectedIDs);
 
     try {
-        const response = await fetch(config.DELETE_PRODUCTS, { 
+        const response = await fetch(config.DELETE_PRODUCTS, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(selectedIDs)

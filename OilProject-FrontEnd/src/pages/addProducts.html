@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/addPageStyles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap">
   <title>OilProject</title>
 </head>
+
 <body>
   <div class="header-container">
+    <div class="header">
+    <a href="../../../index.html" class="mdi mdi-home homeButton" id="homeButton"></a>
     <h1>OilProject</h1>
+  </div>
     <div class="header-inputs">
       <label for="ProductPlace">Selecione a Loja: <span class="required">*</span></label>
       <select id="ProductPlace" name="ProductPlace" required>
-        <option value="">Selecione a Loja</option> 
-        <option value="Rappi">Rappi</option> 
-        <option value="Ifood">Ifood</option> 
+        <option value="">Selecione a Loja</option>
+        <option value="Rappi">Rappi</option>
+        <option value="Ifood">Ifood</option>
         <option value="Uber">Uber</option>
         <option value="Justos">Justos</option>
         <option value="Carrefour">Carrefour</option>
@@ -25,9 +32,9 @@
       </select>
       <label for="ProductMark">Selecione a Marca: <span class="required">*</span></label>
       <select id="ProductMark" name="ProductMark" required>
-        <option value="">Selecione a Marca</option> 
-        <option value="Soya">Soya</option> 
-        <option value="Liza">Liza</option> 
+        <option value="">Selecione a Marca</option>
+        <option value="Soya">Soya</option>
+        <option value="Liza">Liza</option>
         <option value="Cocamar">Cocamar</option>
         <option value="Concórdia">Concórdia</option>
         <option value="Coamo">Coamo</option>
@@ -42,23 +49,26 @@
       <input type="number" id="ProductsQuantity" placeholder="Quantidade:" required step="1" min="1">
 
       <!-- <button id="addMore">Incluir</button> -->
-      <label for="ProductMarkSecond" id="ProductMarkLabel" class="fade" style="display: none;">Selecione a Marca: <span class="required">*</span></label>
-        <select id="ProductMarkSecond" class="fade" style="display: none;" name="ProductMark" required>
-          <option value="">Selecione a Marca</option> 
-          <option value="Soya">Soya</option> 
-          <option value="Liza">Liza</option> 
-          <option value="Cocamar">Cocamar</option>
-          <option value="Concórdia">Concórdia</option>
-          <option value="Coamo">Coamo</option>
-          <option value="Vitaliv">Vitaliv</option>
-          <option value="Qualita">Qualita</option>
-          <option value="Sogao-galao">Sogai Galão 18L</option>
-          <option value="Sogai-lata">Sogai Lata 18L</option>
-          <option value="VilaVelha">Vila Velha 18L</option>
-        </select>
-      <label for="ProductsQuantitySecond" class="fade" id="ProductQuantityLabel" style="display: none;">Quantidade do segundo produto: <span class="required">*</span></label>
-      <input type="number" id="ProductsQuantitySecond" class="fade" style="display: none;" placeholder="Quantidade:" required>
-      
+      <label for="ProductMarkSecond" id="ProductMarkLabel" class="fade" style="display: none;">Selecione a Marca: <span
+          class="required">*</span></label>
+      <select id="ProductMarkSecond" class="fade" style="display: none;" name="ProductMark" required>
+        <option value="">Selecione a Marca</option>
+        <option value="Soya">Soya</option>
+        <option value="Liza">Liza</option>
+        <option value="Cocamar">Cocamar</option>
+        <option value="Concórdia">Concórdia</option>
+        <option value="Coamo">Coamo</option>
+        <option value="Vitaliv">Vitaliv</option>
+        <option value="Qualita">Qualita</option>
+        <option value="Sogao-galao">Sogai Galão 18L</option>
+        <option value="Sogai-lata">Sogai Lata 18L</option>
+        <option value="VilaVelha">Vila Velha 18L</option>
+      </select>
+      <label for="ProductsQuantitySecond" class="fade" id="ProductQuantityLabel" style="display: none;">Quantidade do
+        segundo produto: <span class="required">*</span></label>
+      <input type="number" id="ProductsQuantitySecond" class="fade" style="display: none;" placeholder="Quantidade:"
+        required>
+
 
       <label for="ProductsPrice">Preço total: <span class="required">*</span></label>
       <input type="number" id="ProductsPrice" placeholder="Preço total:" step="0.01" min="0" required>
@@ -69,6 +79,7 @@
     </div>
   </div>
   <script src="../js/interactions/addProducts/addProductForm.js"></script>
- <!-- <script src="../js/addProducts/interactions/addMore.js"></script> -->
+  <!-- <script src="../js/addProducts/interactions/addMore.js"></script> -->
 </body>
+
 </html>

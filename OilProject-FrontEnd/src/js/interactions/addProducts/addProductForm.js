@@ -44,7 +44,7 @@ async function addProduct(config) {
             console.log(`${key}: ${value}`);
         }
         try {
-            const response = await fetch(config.ADD_PRODUCTS, { 
+            const response = await fetch(config.ADD_PRODUCTS, {
                 method: 'POST',
                 body: formData
             });
@@ -58,7 +58,7 @@ async function addProduct(config) {
         } catch (error) {
             console.error('Error:', error);
             alert('Erro ao fazer a requisição. Por favor, tente novamente.');
-        }        
+        }
     } else {
         alert('Por favor, preencha todos os campos obrigatórios e selecione uma foto.');
     }

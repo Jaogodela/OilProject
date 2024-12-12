@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/addPageStyles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap">
   <title>OilProject</title>
 </head>
+
 <body>
   <div class="header-container">
-    <h1>OilProject</h1>
+    <div class="header">
+      <a href="../../../index.html" class="mdi mdi-home homeButton" id="homeButton"></a>
+      <h1>OilProject</h1>
+    </div>
     <div class="header-inputs">
       <label for="ProductOption">Selecione o produto para saída: <span class="required">*</span></label>
       <select id="ProductOption" name="ProductOption" required>
         <option value="pet-oleo-900ml">PET Oléo de Soja 900ml</option>
         <option value="galao-oleo-18l">Galão Oléo de Soja 18L</option>
         <option value="lata-oleo-18l">Lata de Oléo de Soja 18L</option>
-      </select> 
-       <label for="ProductQuantity">Informe a quantidade: <span class="required">*</span></label>
-       <input type="number" id="ProductQuantity" name="ProductQuantity" placeholder="Quantidade" step="1" min="1"  required>
-       <label for="ProductRazao">Informe a razão para Saída: <span class="required">*</span></label>
-       <input type="text" id="ProductRazao" name="ProductRazao" placeholder="Razão">
+      </select>
+      <label for="ProductQuantity">Informe a quantidade: <span class="required">*</span></label>
+      <input type="number" id="ProductQuantity" name="ProductQuantity" placeholder="Quantidade" step="1" min="1"
+        required>
+      <label for="ProductRazao">Informe a razão para Saída: <span class="required">*</span></label>
+      <input type="text" id="ProductRazao" name="ProductRazao" placeholder="Razão">
       <button id="buttonRemoveProducts" type="submit">Enviar</button>
     </div>
   </div>
   <script src="../js/interactions/removeProducts/removeProductForm.js"></script>
 </body>
+
 </html>

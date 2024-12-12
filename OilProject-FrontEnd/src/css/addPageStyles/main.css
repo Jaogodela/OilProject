@@ -14,9 +14,9 @@ body {
 }
 
 h1 {
-  color:#45a049;
+  color: #45a049;
+  margin: 0; 
 }
-
 .fade.show {
   opacity: 1;
 }
@@ -27,9 +27,20 @@ h1 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
   width: 100%;
   max-width: 400px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  position: relative;
+  padding: 10px;
+}
+
+.header .homeButton {
+  margin-right: 95px; 
 }
 
 .header-inputs {
@@ -47,7 +58,11 @@ label {
   margin-bottom: 5px;
 }
 
-button, select, input[type="text"], input[type="number"], input[type="file"] {
+button,
+select,
+input[type="text"],
+input[type="number"],
+input[type="file"] {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   padding: 10px;
@@ -73,8 +88,16 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #45a049;
 }
+
 .required {
-  color: red; 
-  font-weight: bold; 
+  color: red;
+  font-weight: bold;
 }
 
+.homeButton {
+  color: #4CAF50;
+  font-size: 28px;
+}
+.homeButton:hover {
+  color: #45a049;
+}

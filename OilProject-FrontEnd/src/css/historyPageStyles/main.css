@@ -87,8 +87,3 @@ body {
   margin-right: 0px;
 }
 
-@media (max-width: 768px) {
-  .product-header {
-    font-size: small;
-  }
-}
