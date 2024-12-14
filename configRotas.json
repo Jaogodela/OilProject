@@ -1,5 +1,5 @@
 {
-    "ADD_PRODUCTS":"/api/post/products/addProduct",
+    "ADD_PRODUCTS":"http://localhost:3000/addProduct",
     "REMOVE_PRODUCTS":"/api/post/products/removeProduct",
     "SELL_PRODUCTS":"/api/post/products/sellProduct",
     "RELATORY_PRODUCTS":"/api/get/products/relatory/${type}",
