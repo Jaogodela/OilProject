@@ -15,8 +15,9 @@ body {
 
 h1 {
   color: #45a049;
-  margin: 0; 
+  margin: 0;
 }
+
 .fade.show {
   opacity: 1;
 }
@@ -34,13 +35,19 @@ h1 {
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
+  padding: 18px;
   position: relative;
-  padding: 10px;
 }
 
 .header .homeButton {
-  margin-right: 95px; 
+  position: relative;
+  margin-right: auto;
+}
+
+.header .title {
+  position: absolute;
+  left: 52%;
+  transform: translateX(-50%);
 }
 
 .header-inputs {
@@ -98,6 +105,7 @@ button[type="submit"]:hover {
   color: #4CAF50;
   font-size: 28px;
 }
+
 .homeButton:hover {
   color: #45a049;
 }

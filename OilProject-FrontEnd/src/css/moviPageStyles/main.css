@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+  }
+  
+  .fade {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+  
+  h1 {
+    color: #45a049;
+    margin: 0;
+  }
+  
+  .fade.show {
+    opacity: 1;
+  }
+  
+  .header-container {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+  }
+  
+  .header .homeButton {
+    position: relative;
+    margin-right: auto;
+  }
+  
+  .header .title {
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+  }
+  
+  .header-inputs {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  label {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  button,
+  select,
+  input[type="text"],
+  input[type="number"],
+  input[type="file"] {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .required {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .homeButton {
+    color: #4CAF50;
+    font-size: 28px;
+  }
+  
+  .homeButton:hover {
+    color: #45a049;
+  }

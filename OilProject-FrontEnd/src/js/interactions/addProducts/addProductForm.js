@@ -3,12 +3,12 @@ const buttonAddProducts = document.getElementById('buttonAddProducts');
 async function loadConfig() {
     try {
         const response = await fetch('../../../configRotas.json');
-        if (!response.ok) {
-            throw new Error('Erro ao carregar as configurações');
-        }
-        return await response.json();
+        const configArray = await response.json();
+        const apiEndpoints = configArray[0];
+        const productCodes = configArray[1];
+        return { apiEndpoints, productCodes };
     } catch (error) {
-        console.error('Falha ao carregar o arquivo de configuração:', error);
+        console.error('Erro ao carregar as configurações:', error);
     }
 }
 
@@ -44,7 +44,7 @@ async function addProduct(config) {
             console.log(`${key}: ${value}`);
         }
         try {
-            const response = await fetch(config.ADD_PRODUCTS, {
+            const response = await fetch(config.apiEndpoints.ADD_PRODUCTS, {
                 method: 'POST',
                 body: formData
             });

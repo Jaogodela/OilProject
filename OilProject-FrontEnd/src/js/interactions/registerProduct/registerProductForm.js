@@ -5,6 +5,8 @@
    OUTROS: 6,
 */
 
+const buttonRegisterProducts = document.getElementById("buttonRegister");
+
 async function loadConfig() {
     try {
         const response = await fetch('../../../configRotas.json');
@@ -17,28 +19,24 @@ async function loadConfig() {
     }
 }
 
-async function postRemoveProducts(config) {
-    const productOptionID = document.getElementById('ProductOption').value;
-    const productQuantity = document.getElementById('ProductQuantity').value;
-    const productRazao = document.getElementById('ProductRazao').value;
+async function postRegisterProducts(config) {
 
-    if (productRazao === "" || productQuantity === "" || productRazao < 0 || productQuantity < 0) {
-        alert("Preencha todos os campos com valores válidos!");
-        return;
+    const productOption = document.getElementById('ProductOption').value;
+    const productGallonQuantity = document.getElementById('ProductsQuantity').value;
+    const oilPetUsed = productGallonQuantity * 19;
+
+    const registerProductsObj = {
+        ProductOption: productOption,
+        ProductGallonQuantity: productGallonQuantity,
+        ProductOilPetUsed: oilPetUsed
     }
-
-    const removeProductObj = { 
-        ProductOptionID: productOptionID, 
-        ProductQuantity: productQuantity, 
-        ProductRazao: productRazao 
-    };
-    console.log(removeProductObj);
+    console.log(registerProductsObj);
 
     try {
-        const response = await fetch(config.apiEndpoints.REMOVE_PRODUCTS, { 
+        const response = await fetch(config.apiEndpoints.REGISTER_PRODUCTS, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(removeProductObj)
+            body: JSON.stringify(registerProductsObj)
         });
         if (response.ok) {
             const result = await response.json();
@@ -55,11 +53,11 @@ async function postRemoveProducts(config) {
     }
 }
 
-buttonRemoveProducts.addEventListener('click', async (event) => {
+buttonRegisterProducts.addEventListener('click', async (event) => {
     event.preventDefault();
     const config = await loadConfig();
     if (config) {
-        await postRemoveProducts(config);
+        await postRegisterProducts(config);
     } else {
         alert('Erro ao carregar as configurações. Por favor, tente novamente mais tarde.');
     }

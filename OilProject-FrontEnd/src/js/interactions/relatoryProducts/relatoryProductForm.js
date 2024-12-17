@@ -1,20 +1,19 @@
 async function loadConfig() {
     try {
         const response = await fetch('../../../configRotas.json');
-        if (!response.ok) {
-            throw new Error('Erro ao carregar as configurações');
-        }
-        return await response.json();
+        const configArray = await response.json();
+        const apiEndpoints = configArray[0];
+        const productCodes = configArray[1];
+        return { apiEndpoints, productCodes };
     } catch (error) {
-        console.error('Falha ao carregar o arquivo de configuração:', error);
+        console.error('Erro ao carregar as configurações:', error);
     }
 }
-
 const buttonRequestRelatory = document.getElementById('buttonRequestRelatory');
 
 async function postRequestRelatory(config) {
     const relatoryOption = document.getElementById('ProductOption').value;
-    const url = config.RELATORY_PRODUCTS.replace('${type}', relatoryOption); 
+    const url = config.apiEndpoints.RELATORY_PRODUCTS.replace('${type}', relatoryOption); 
 
     try {
         const response = await fetch(url, {

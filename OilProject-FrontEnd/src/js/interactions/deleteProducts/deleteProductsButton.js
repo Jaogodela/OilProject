@@ -3,7 +3,10 @@ const deleteButton = document.getElementById('delete');
 async function loadConfig() {
     try {
         const response = await fetch('../../../configRotas.json');
-        return await response.json();
+        const configArray = await response.json();
+        const apiEndpoints = configArray[0];
+        const productCodes = configArray[1];
+        return { apiEndpoints, productCodes };
     } catch (error) {
         console.error('Erro ao carregar as configurações:', error);
     }
@@ -15,7 +18,7 @@ async function deleteProducts(config) {
     console.log(selectedIDs);
 
     try {
-        const response = await fetch(config.DELETE_PRODUCTS, {
+        const response = await fetch(config.apiEndpoints.DELETE_PRODUCTS, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(selectedIDs)
