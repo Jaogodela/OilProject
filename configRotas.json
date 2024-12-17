@@ -1,8 +1,17 @@
-{
-    "ADD_PRODUCTS":"/api/post/products/addProduct",
-    "REMOVE_PRODUCTS":"/api/post/products/removeProduct",
-    "SELL_PRODUCTS":"/api/post/products/sellProduct",
-    "RELATORY_PRODUCTS":"/api/get/products/relatory/${type}",
-    "LIST_PRODUCTS":"/api/get/products/list",
-    "DELETE_PRODUCTS":"/api/post/products/delete"
-}
+[
+    {
+        "ADD_PRODUCTS": "/api/post/products/addProduct",
+        "REMOVE_PRODUCTS": "/api/post/products/removeProduct",
+        "SELL_PRODUCTS": "/api/post/products/sellProduct",
+        "RELATORY_PRODUCTS": "/api/get/products/relatory/${type}",
+        "LIST_PRODUCTS": "/api/get/products/list",
+        "DELETE_PRODUCTS": "/api/post/products/delete",
+        "REGISTER_PRODUCTS":"/api/post/products/registerProduct"
+    },
+    {
+        "OIL_GALAO_18L": 1,
+        "OIL_LATA_18L": 2,
+        "OIL_PET_900ML": 3,
+        "OTHERS": 6
+    }
+]
