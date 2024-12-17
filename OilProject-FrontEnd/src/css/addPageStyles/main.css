@@ -109,3 +109,12 @@ button[type="submit"]:hover {
 .homeButton:hover {
   color: #45a049;
 }
+
+@media (max-width: 768px) {
+  .homeButton {
+   font-size: 24px;
+  }
+  .header .homeButton {
+    margin-right: 95px; 
+  }
+}
