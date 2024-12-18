@@ -1,12 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const addProductRoute = require('./routes/addProduct');
-const removeProductRoute = require('./routes/removeProduct');
+const outflowProductRoute = require('./routes/outflowProduct');
 const sellProductRoute = require('./routes/sellProduct');
-const configureStaticUploads = require('./routes/staticUploads');
+const registerProductRoute = require('./routes/registerProduct');
+const relatoryProductRoute = require('./routes/relatoryProduct');
+const deleteProductRoute = require('./routes/deleteProduct');
 const helloworld = require('./routes/helloworld');
-const mysql = require('mysql2');
-const db = require('./database');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -15,9 +15,11 @@ app.use(cors());
 app.use(express.json());
 
 addProductRoute(app);
-removeProductRoute(app);
+outflowProductRoute(app);
 sellProductRoute(app);
-configureStaticUploads(app);
+registerProductRoute(app);
+relatoryProductRoute(app);
+deleteProductRoute(app);
 helloworld(app);
 
 app.listen(port, '0.0.0.0', () => {

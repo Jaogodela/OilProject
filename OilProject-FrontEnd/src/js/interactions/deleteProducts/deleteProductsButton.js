@@ -13,7 +13,7 @@ async function loadConfig() {
 }
 
 async function deleteProducts(config) {
-    const selectedIDs = getSelectedIds(); // the function getSelectedIDs is in functions/functionCheckbox (returns a array)
+    const selectedIDs = getSelectedIds(); // a função getSelectedIDs está em functions/functionCheckbox e retorna um array
 
     console.log(selectedIDs);
 
@@ -32,7 +32,6 @@ async function deleteProducts(config) {
         }
     } catch (error) {
         console.error('Error:', error);
-        alert('Erro ao fazer a requisição. Por favor, tente novamente.');
     }
 }
 

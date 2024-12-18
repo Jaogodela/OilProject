@@ -1,5 +1,5 @@
 const multer = require('multer');
-const { addProduct } = require('./functions/queries.js'); 
+const { addProduct } = require('./functions/queries.js');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, 'uploads/'),
@@ -9,11 +9,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 module.exports = function (app) {
-  app.post('/addProduct', upload.single('imageNF'), (req, res) => {
+  app.post('/api/post/products/addProduct', upload.single('imageNF'), (req, res) => {
     const { file } = req;
     const { loja, marca, quantidade, preco, unit, dataHora } = req.body;
     console.log(req.body);
-    
+
     if (!file || !loja || !marca || !quantidade || !preco || !unit || !dataHora) {
       return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
     }

@@ -35,7 +35,7 @@ async function postRemoveProducts(config) {
     console.log(removeProductObj);
 
     try {
-        const response = await fetch(config.apiEndpoints.REMOVE_PRODUCTS, { 
+        const response = await fetch(config.apiEndpoints.OUTFLOW_PRODUCTS, { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(removeProductObj)

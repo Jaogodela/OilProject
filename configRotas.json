@@ -1,11 +1,11 @@
 [
     {
-        "ADD_PRODUCTS": "/api/post/products/addProduct",
-        "REMOVE_PRODUCTS": "/api/post/products/removeProduct",
+        "ADD_PRODUCTS": "https://upgraded-enigma-v6pjw996p7x6cwj44-3000.app.github.dev/api/post/products/addProduct",
+        "OUTFLOW_PRODUCTS": "/api/post/products/outflowProduct",
         "SELL_PRODUCTS": "/api/post/products/sellProduct",
         "RELATORY_PRODUCTS": "/api/get/products/relatory/${type}",
         "LIST_PRODUCTS": "/api/get/products/list",
-        "DELETE_PRODUCTS": "/api/post/products/delete",
+        "DELETE_PRODUCTS": "https://upgraded-enigma-v6pjw996p7x6cwj44-3000.app.github.dev/api/post/products/deleteProduct",
         "REGISTER_PRODUCTS":"/api/post/products/registerProduct"
     },
     {

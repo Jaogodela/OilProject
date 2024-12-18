@@ -1,5 +1,3 @@
-const db = require('../database.js'); 
-
 function addProduct({ loja, marca, quantidade, preco, unit, dataHora, imageNF }, callback) {
   const query = `INSERT INTO produtos (loja, marca, quantidade, preco, unit, dataHora, imageNF) VALUES (?, ?, ?, ?, ?, ?, ?)`;
   const values = [loja, marca, quantidade, preco, unit, dataHora, imageNF];
