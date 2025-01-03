@@ -6,7 +6,7 @@
         "RELATORY_PRODUCTS": "/api/get/products/relatory/${type}",
         "LIST_PRODUCTS": "/api/get/products/list",
         "DELETE_PRODUCTS": "https://upgraded-enigma-v6pjw996p7x6cwj44-3000.app.github.dev/api/post/products/deleteProduct",
-        "REGISTER_PRODUCTS":"/api/post/products/registerProduct"
+        "REGISTER_PRODUCTS":"https://upgraded-enigma-v6pjw996p7x6cwj44-3000.app.github.dev/api/post/products/registerProduct"
     },
     {
         "OIL_GALAO_18L": 1,
